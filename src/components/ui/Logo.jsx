@@ -1,7 +1,7 @@
 import { business } from '../../data/business'
 import { cn } from '../../lib/cn'
 
-/** Typographic wordmark. Swap for the real logo file when one is supplied. */
+/** Brand lockup: hex-nut badge (public/brand/logo-mark.svg) + live-text wordmark. */
 export function Logo({ tone = 'dark', className }) {
   return (
     <a
@@ -12,25 +12,27 @@ export function Logo({ tone = 'dark', className }) {
       )}
       aria-label={`${business.name}, back to top`}
     >
-      <svg viewBox="0 0 64 64" className="size-10 shrink-0" aria-hidden="true">
-        <rect width="64" height="64" rx="14" className={tone === 'dark' ? 'fill-white/5' : 'fill-ink-900'} />
-        <rect width="63" height="63" x=".5" y=".5" rx="13.5" fill="none" className="stroke-white/15" />
-        <path d="M14 16h10l8 22 8-22h10L37 48H27z" className="fill-accent-500" />
-        <rect x="14" y="52" width="36" height="4" rx="2" className="fill-steel-400" />
-      </svg>
+      <img
+        src="brand/logo-mark.svg"
+        alt=""
+        width="44"
+        height="44"
+        className="size-11 shrink-0 transition-transform duration-300 group-hover:rotate-[-6deg]"
+      />
       <span className="leading-none">
         <span
           className={cn(
-            'block font-display text-[17px] font-extrabold tracking-tight',
+            'block font-display text-[17px] font-black tracking-tight uppercase',
             tone === 'dark' ? 'text-white' : 'text-ink-950',
           )}
-          style={{ fontStretch: '115%' }}
+          style={{ fontStretch: '118%' }}
         >
           {business.shortName}
         </span>
+        <span className="mt-1.5 block h-0.5 w-6 rounded-full bg-accent-500" aria-hidden="true" />
         <span
           className={cn(
-            'mt-1 block text-[10.5px] font-semibold tracking-[0.22em] uppercase',
+            'mt-1.5 block text-[10px] font-semibold tracking-[0.3em] uppercase',
             tone === 'dark' ? 'text-steel-400' : 'text-steel-500',
           )}
         >
