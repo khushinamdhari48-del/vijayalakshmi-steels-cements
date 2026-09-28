@@ -6,8 +6,10 @@ React + Vite + Tailwind CSS v4 + Lucide icons.
 npm install
 npm run dev      # local dev server
 npm run build    # production build → dist/
-npm run deploy   # build and publish to GitHub Pages (gh-pages branch)
 ```
+
+Hosted on Vercel: every push to `main` redeploys
+https://vijayalakshmi-steels-cements.vercel.app automatically.
 
 ## Filling in business details
 
@@ -27,7 +29,6 @@ marked placeholder or hides its section. Add only details you've confirmed with 
 | `products[].image` | Uses a real photo instead of the illustration |
 | `mapsUrl`, `address.pincode` | Exact directions link / full address |
 
-Also update `index.html`: the JSON-LD block (telephone, openingHours, url, image), and the
-canonical URL / `og:url` / `og:image` once the domain is known.
+If the site address changes, update the canonical URL, `og:url`, `og:image` and JSON-LD `url` in `index.html`.
 
 Source material (Justdial screenshots) is in `listings/`; cropped photos are in `public/photos/`.
