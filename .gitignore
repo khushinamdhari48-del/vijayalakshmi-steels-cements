@@ -1,0 +1,6 @@
+node_modules
+dist
+*.local
+# source screenshots (not needed for the site)
+listing/
+listings/

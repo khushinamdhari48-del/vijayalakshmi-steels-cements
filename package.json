@@ -1,0 +1,24 @@
+{
+  "name": "vijayalakshmi-steels-cements",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "deploy": "vite build && gh-pages -d dist --nojekyll -m \"Deploy site\" -u \"khushinamdhari48-del <233949649+khushinamdhari48-del@users.noreply.github.com>\""
+  },
+  "dependencies": {
+    "lucide-react": "^1.48.0",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "^4.3.3",
+    "@vitejs/plugin-react": "^6.1.1",
+    "gh-pages": "^6.3.0",
+    "tailwindcss": "^4.3.3",
+    "vite": "^8.3.1"
+  }
+}
